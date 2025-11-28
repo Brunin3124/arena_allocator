@@ -4,11 +4,6 @@
 #include <assert.h>
 
 
-typedef struct{
-    unsigned char* buffer;
-    size_t length;
-    size_t offset;
-} Arena;
 
 void arena_init(Arena* a, size_t size){
     a->buffer = malloc(size);
