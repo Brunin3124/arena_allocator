@@ -4,6 +4,8 @@
 #include <stdint.h>
 #include <stdlib.h>
 #include <assert.h>
+#include <stdio.h>
+#include <stdbool.h>
 //struct
 typedef struct{
     unsigned char* buffer;
@@ -12,7 +14,7 @@ typedef struct{
 } Arena;
 
 //functions
-void arena_init(Arena* a, size_t size);
+bool arena_init(Arena* a, size_t size);
 void arena_reset(Arena* a);
 void* arena_malloc(Arena* a,size_t size);
 
